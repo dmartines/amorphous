@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Amorphous</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Lato:100);
+
+      * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        overflow-x: auto; 
+        color: #ffffff;
+        font-family: 'Lato';
+        font-weight: 100;
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+      }
+
+      section {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+
+      .panels.offset section{
+        height: calc(100% - 85px);
+      }
+
+      .panels.offset header{
+        height: 85px;
+        background-color:  #1abc9c;
+      }
+
+      section.introduction {
+        text-align: center;
+        display: table;
+
+        background: #f0f0f0;
+      }
+
+      section.introduction:after {
+
+        display: block;
+        position: absolute;
+        top: -200%;
+        left: -150%;
+        height: 500%;
+        width: 200%;
+
+        content: '';
+
+        z-index: -1;
+
+        -moz-transform-origin:  100% 50%;
+        -o-transform-origin:  100% 50%;
+        -webkit-transform-origin: 100% 50%;
+        transform-origin:  100% 50%;
+
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+
+      }
+
+      .center {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      section.introduction .center p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px;
+      }
+
+      section.introduction .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 50px;
+
+        text-align: center;
+        font-size: 60%;
+      }
+
+      section.introduction .bottom:after {
+        display: block;
+        margin: 1em auto 0;
+        height: 20px;
+        width: 20px;
+
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        content: '';
+
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      pre {
+        font-size: 65%;
+      }
+
+      .panels,
+      .log,
+      .menu,
+      pre {
+        position: absolute;
+        top: 200px;
+        bottom: 50px;
+        right: 50px;
+        left: 400px;
+        overflow: scroll;
+      }
+
+      .log,
+      .menu {
+        right: auto;
+        left: 50px;
+        width: 300px;
+      }
+
+      pre {
+        left: 50px;
+        padding: 50px;
+      }
+
+      .menu a {
+        display: block;
+        width: 100%;
+        padding: 25px;
+        background: #f1c40f;
+        margin: 0 0 25px 0;
+
+        border: none;
+      }
+
+      .menu a.active,
+      .menu a:active,
+      .menu a:hover {
+        background: #f39c12;
+      }
+    </style>
+    <link href="css/webfont/font.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet" >
+
+  </head>
+  <body>
+  
+  		<nav class="navbar navbar-default navbar-fixed-top" id="top">
+			<div class="container-fluid">
+				
+				<div class="navbar-header">
+		        	<a href="javascript:scrollTop();" class="navbar-brand"><img id="logoimg" class="navbar-brand imglogo"></a>
+			        <div class="navbar-right">
+						<ul class="nav navbar-nav">
+						<li class="dropdown">
+				          <a href="javascript:openModal();" class="dropdown1 dropdown-toggle1" data-toggle="dropdown1" role="button" aria-expanded="false" style="padding: 0px;">
+							<img src="img/menu2.svg" id="menuimg" >
+							<!-- <button type="button" class="navbar-toggle" style="display: -webkit-box; border-color: transparent !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						    </button> -->
+					      </a>
+				          <ul class="dropdown-menu right" role="menu">
+				            <li><a href="#slide-2">Background</a></li>
+				            <li><a href="#slide-14">Model</a></li>
+				            <li><a href="#slide-17">Clients</a></li>
+				            <li><a href="#slide-21">Contacts</a></li>
+				          </ul>
+						</li>
+						</ul>
+			        </div>
+		        </div> 
+		    </div>
+		</nav> 
+
+  
+  
+    <section id="slide-1" class="introduction">
+    	<div class="center">
+            <img src="img/noform2.svg" class="imgnoform"></br>
+			<a href="#slide-2"><img src="img/downarrow3.svg" class="imgdownarrow"></a>
+      	</div>
+    </section>
+
+    <section id="slide-2" class="whitepanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel hsContent-short">
+	          	<h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-2 h1">In 2013, global ad spending reached $500 billion.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section>
+
+	<section id="slide-3" class="homeSlide dots">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-4" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-4 h1">Each of these circles represents $500M in media.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-5" class="homeSlide imgr">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-6" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-6 h1">If you are one of the world's largest brands, you can buy one or maybe a couple of the circles.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-7" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent lines">
+		      	<img src="img/lines2.svg" class="imglines">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-8" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-8 h1">Even if you can afford a circle, its value is declining.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-9" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel">
+				<div class="row" id="23row">
+		  			<div class="col-md-6 col-sm-6 vcenter">
+		  				<img src="img/23.svg" style="width:100%;">
+		  			</div><!--
+								--><div class="col-md-6 col-sm-6 vcenter" id="23text">
+		  				<h1 class="skrollable skrollable-between" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-9 h1">TV advertising is about 2/3 as effective as it was 10 years ago.</h1>
+		  			</div>
+		  		</div>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-10" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel">
+				<div class="row" id="14row">
+		  			<div class="col-md-6 col-sm-6 vcenter" id="14text">
+		  				<h1 class="skrollable skrollable-between" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-10 h1">Digital ads are worse, being only 1/4 as effective over the same period.</h1>
+		  			</div><!--
+								--><div class="col-md-6 col-sm-6 vcenter">
+		  				<img src="img/14.svg" style="width:100%;">
+		  			</div>
+		  		</div>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-12" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-12 h1">If you want to make something 10 percent better, you just need to be 10 percent better at what you're currently doing. Work harder, longer, faster. But if you want to make something 10 times better, you need to start over.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section id="slide-11" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+	            <img src="img/asterisk.svg" class="imgasterisk">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-13" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-13 h1">We've built a company that is able to continuously start over by having no predetermined form.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section>
+
+	<section id="slide-14" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+	            <img src="img/model.svg" class="imgmodel">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-15" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent blackpanel hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-15 h1">Having no form allows the problem and the opportunity to define the solution, not the other way around. It encourages openness and collaboration with partners, thought leaders and customers. It creates the conditions for a rapid and iterative development process, with an emphasis on prototyping, learning, and improving.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-16" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent blackpanel hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-16 h1">The result? Ideas that outperform traditional advertising. Like this.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-17" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent greenpanel">
+	            <img src="img/nike.svg" class="imgnike">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-22" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent" style="padding: 0px !important;">
+	            <video autoplay loop muted id="bgvid">
+				  <source src="video/Nike.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-18" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-18 h1">Amorphous is a new model strategic and creative collective. We help businesses invent more effective forms or marketing - from apps to content, spaces, events, games, experiences, collaborations, and more.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-19" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer blackpanel">
+	          <div class="hsContent">
+	            <img src="img/clients3.svg" class="clientimg">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-21" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContentWide whitepanel">
+				<div class="row contactustop">
+					<img src="img/downarrow3.svg" class="rightarrow fp-prev">
+					<!--   -->
+					<div id="carousel-locations" class="carousel slide" data-ride="carousel">
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+					    <div class="item active">
+					      <img src="img/map2a.svg" class="mapimg" alt="San Francisco">
+					    </div>
+					    <div class="item">
+					      <img src="img/map-b.svg" class="mapimg" alt="New York">
+					    </div>
+					  </div>
+					</div>
+					
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-locations" role="button" data-slide="prev">
+						<img src="img/downarrow3.svg" class="leftarrow">
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-locations" role="button" data-slide="next">
+					    <img src="img/downarrow3.svg" class="rightarrow">
+					    <span class="sr-only">Next</span>
+					</a>
+					
+				</div>
+				<div class="row contactusbottom" id="contactbottom">
+					<table class="contacttable" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td class="contacttd" valign="top">
+			            		<h4>
+			            			Amorphous</br>
+			            			- Having no definite form: shapeless
+			            		</h4>
+							</td>
+							<td class="contacttd" valign="top">
+			            		<h4 class="locationlink" id="sfmap">
+			            			SF</br>
+			            			- 550 Montgomery St, San Francisco, CA, 94110
+			            		</h4></br>
+							</td>
+							<td class="contacttd" valign="top">
+			            		<h4>
+			            			Email</br>
+			            			- <a href="mailto:sf@amorphousinc.com">sf@amorphousinc.com</a>
+			            		</h4></br>
+							</td>
+							<td class="contacttd" valign="top">
+			            		<h4>
+			            			Phone</br>
+			            			- <a href="tel:1.415.812.9204">1.415.812.9204</a>
+			            		</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+							<td valign="top">
+			            		<h4 class="locationlink" id="nymap">
+			            			NY</br>
+			            			- 648 Broadway, New York, NY, 10012
+			            		</h4>
+							</td>
+							<td valign="top">
+			            		<h4>
+			            			Email</br>
+			            			- <a href="mailto:ny@amorphousinc.com">ny@amorphousinc.com</a>
+			            		</h4>
+							</td>
+							<td valign="top">
+			            		<h4>
+			            			Phone</br>
+			            			- <a href="tel:1.646.926.4980">1.646.926.4980</a>
+			            		</h4>
+							</td>
+						</tr>
+					</table>
+	            </div>
+		      </div>
+	      </div>
+	    </div>
+	   </section> 
+
+
+	<div>
+		<div class="modal fade menumodal" id="menumodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="padding-right:0px !important;">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		    	<a href="javascript:closeModal();"><img src="img/x.svg" class="imgx"></a>
+		    	<div class="modallinks">
+		            <a href="#slide-2" class="modallink" id="modallink1">01<br>Background</a><br><br><br>
+		            <a href="#slide-14" class="modallink" id="modallink2">02<br>Model</a><br><br><br>
+		            <a href="#slide-17" class="modallink" id="modallink3">03<br>Clients</a><br><br><br>
+		            <a href="#slide-21" class="modallink" id="modallink4">04<br>Contacts</a><br>
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+   </div>
+
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.panelSnap.js"></script>
+	    
+    <script>
+	    $( document ).ready(function() {
+			//Map Carousel
+			$('.carousel').carousel({
+				interval: false
+			})
+			$('#sfmap').click(function() {
+				$('.carousel').carousel(0);
+			});
+			$('#nymap').click(function() {
+				$('.carousel').carousel(1);
+			});
+			
+			//Add link to locations
+		    $('.slide').on('click touchstart', '.locationlink', function() {
+				if ($(this).hasClass('fp-prev')) {
+					$.fn.fullpage.moveSlideLeft();
+				} else {
+					$.fn.fullpage.moveSlideRight();
+				}
+			});
+		    $('.slide').on('click touchstart', '.rightarrow', function() {
+				if ($(this).hasClass('fp-prev')) {
+					$.fn.fullpage.moveSlideLeft();
+				} else {
+					$.fn.fullpage.moveSlideRight();
+				}
+			});
+		    $('.slide').on('click touchstart', '.leftarrow', function() {
+				if ($(this).hasClass('fp-prev')) {
+					$.fn.fullpage.moveSlideLeft();
+				} else {
+					$.fn.fullpage.moveSlideRight();
+				}
+			});
+		    
+		    $('#modallink1').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    $('#modallink2').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    $('#modallink3').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    $('#modallink4').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    
+	        var fromTopPx = $("#slide-1").height(); // distance to trigger
+	        var scrolledFromtop = jQuery(window).scrollTop();
+	        if((scrolledFromtop >= 2*fromTopPx && scrolledFromtop < 3*fromTopPx) ||
+	           (scrolledFromtop >= 4*fromTopPx && scrolledFromtop < 5*fromTopPx)	||
+	           (scrolledFromtop >= 10*fromTopPx && scrolledFromtop < 18*fromTopPx) ||
+	           (scrolledFromtop >= 19*fromTopPx && scrolledFromtop < 20*fromTopPx) ){
+	        	$("#menuimg").attr('src','img/menu2-white.svg' );
+	        	$("#logoimg").attr('src','img/logo2b.svg' );
+	        } else {
+	        	$("#menuimg").attr('src','img/menu2.svg' );
+	        	$("#logoimg").attr('src','img/logo2a.svg' );
+	        }
+
+	    });
+	    
+	    $(window).resize(function() {
+	        setTimeout( function(){
+	            window.location.reload();
+	        },1000); 
+	    });
+	    
+	    jQuery(window).scroll(function(){
+	        var fromTopPx = $("#slide-1").height(); // distance to trigger
+	        var scrolledFromtop = jQuery(window).scrollTop();
+	        if((scrolledFromtop >= 2*fromTopPx && scrolledFromtop < 3*fromTopPx) ||
+	           (scrolledFromtop >= 4*fromTopPx && scrolledFromtop < 5*fromTopPx)	||
+	           (scrolledFromtop >= 10*fromTopPx && scrolledFromtop < 18*fromTopPx) ||
+	           (scrolledFromtop >= 19*fromTopPx && scrolledFromtop < 20*fromTopPx) ){
+	        	$("#menuimg").attr('src','img/menu2-white.svg' );
+	        	$("#logoimg").attr('src','img/logo2b.svg' );
+	        } else {
+	        	$("#menuimg").attr('src','img/menu2.svg' );
+	        	$("#logoimg").attr('src','img/logo2a.svg' );
+	        }
+	    });
+	    
+    	function scrollTop() {
+    		window.scrollTo(0,0);
+    	}
+    	function openModal() {
+    		$('#menumodal').modal('toggle')
+    	};
+    	function closeModal() {
+    		$('#menumodal').modal('hide')
+    	};
+
+      jQuery(function($) {
+
+        // Basic demo
+        $('body').panelSnap();
+
+        // Menu demo
+        $('.menu_demo .panels').panelSnap({
+          $menu: $('.menu_demo .menu')
+        });
+
+        // Keyboard demo
+        $('.keyboard_demo .panels').panelSnap({
+          keyboardNavigation: {
+            enabled: true,
+            nextPanelKey: 39,
+            previousPanelKey: 37,
+            wrapAround: false
+          }
+        });
+
+        // Callback demo
+        $('.callback_demo .panels').panelSnap({
+          onSnapStart: function($target) {
+
+            log('callback', 'onSnapStart', $target);
+
+          },
+          onSnapFinish: function($target) {
+
+            log('callback', 'onSnapFinish', $target);
+
+          },
+          onActivate: function($target) {
+
+            log('callback', 'onActivate', $target);
+
+          }
+        });
+
+        // Event demo
+        $('.event_demo .panels').on('panelsnap:start', event_log);
+        $('.event_demo .panels').on('panelsnap:finish', event_log);
+        $('.event_demo .panels').on('panelsnap:activate', event_log);
+
+        $('.event_demo .panels').panelSnap();
+
+        function event_log(e, $target) {
+
+          log('event', e.type, $target);
+
+        }
+
+        // Offset demo
+        $('.offset_demo .panels').panelSnap({
+            offset: 85
+        });
+
+        // Shared log function
+        function log(type, action, $target) {
+
+          var text = '<p>' + action + ':<br>' + $target.find('h1').text() + '</p>';
+          $('.' + type + '_demo .log h2').after(text);
+
+        }
+
+      });
+
+    </script>
+
+  </body>
+</html>

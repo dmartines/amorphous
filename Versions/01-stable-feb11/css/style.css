@@ -1,0 +1,397 @@
+/*@font-face {
+    font-family: CourierSansRegularWOFF;
+    src: url(../fonts/glyphicons-halflings-regular.woff);
+}
+@font-face {
+    font-family: CourierSansRegularTTF;
+    src: url(../fonts/glyphicons-halflings-regular.ttf);
+} 
+
+h1, h2, h3, h4, h5, p, div {
+	font-family: CourierSansRegularTTF, CourierSansRegularWOFF, "Helvetica Neue",Helvetica,Arial,sans-serif;
+}*/
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+h3, h4 {
+	text-align: left;
+	line-height: 1.2;
+}
+
+body { 
+	overflow-x: hidden; 
+	background-color: #F0F0F0;
+	color: #141414;
+}
+
+a {
+	color: #141414;
+}
+a:hover {
+	color: rgb(100,100,100);
+	text-decoration: none;
+}
+
+.navbar {
+	background: none !important;
+	border: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.navbar-header {
+	width: 100%;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+.navbar-toggle .icon-bar {
+	border: none !important;
+	/* background-color: #141414 !important; */
+	background-color: #141414 !important;
+	color: #141414 !important;
+	border-color: transparent !important;
+	width: 30px;
+	height: 5px;
+	margin-right: 0px !important;
+}
+
+.navbar-toggle {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+.dropdown {
+	padding: 20px;
+}
+
+.dropdown:hover {
+	opacity: 0.75;
+}
+
+.dropdown-menu {
+	right: 20px !important;
+	top: 50px !important;
+}
+	
+.blackpanel {
+	background: #141414 !important;
+	color: #f0f0f0;
+}
+
+.whitepanel {
+	background: #f0f0f0 !important;
+	color: #141414;
+}
+
+.greenpanel {
+	background: rgb(0,255,90) !important;
+	color: #141414;
+}
+
+.navbar-brand {
+	padding: 20px 20px !important;
+}
+
+@media (max-width: 767px) {
+	.navbar-brand {
+		padding: 10px 10px !important;
+	}
+	.navbar-right {
+		float: right;
+	}
+	.navbar-nav {
+		margin: 3.5px -15px;
+	}
+	.clientimg {
+		width: 100%;
+	}
+}
+
+.clientimg {
+	width: 100%;
+}
+
+.inline {
+	display: inline;
+}
+
+.site-wrapper {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.imglogo {
+	width: 100% !important;
+	padding: 0px;
+	margin: 0px !important;
+}
+
+.imgnoform {
+	width: 75%;
+}
+
+.imgdownarrow {
+	bottom: 40px;
+	position: absolute;
+	/* width: 40px; */
+	left: 50%;
+	right: 50%;
+}
+
+.dots {
+	background: url("../img/dots.svg") no-repeat center center fixed;
+	background-size: cover;
+	background-color: #141414;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.contactsf {
+	background: url("../img/map2a.svg") no-repeat center center;
+	background-size: 100%;
+}
+
+.contactny {
+	background: url("../img/map2a.svg") no-repeat center center;
+	background-size: 100%;
+}
+
+.locationlink:hover {
+	color: rgb(100,100,100);
+	cursor: pointer;
+}
+
+.imgr {
+	background: url("../img/r2.svg") no-repeat center center fixed;
+	background-size: 35%;
+	background-color: #141414;
+}
+
+.imgasterisk {
+	width: 35%;
+}
+
+.imgx {
+	padding: 60px;
+	float: right;
+}
+
+.row {
+	width: 90%;
+	margin: auto;
+}
+
+.imgmodel {
+	width: 80%;
+}
+
+.imglines {
+	width: 100%;
+}
+
+.lines {
+	min-width: 100% !important;
+	padding: 0px !important;
+}
+
+.imgnike {
+	width: 12.5%;
+}
+
+video#bgvid {
+	right: 0; 
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -100;
+	background-size: cover;
+}
+
+.contactustop {
+	width: 100% !important;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+}
+
+.contactusbottom {
+	width: 100% !important;
+	padding: 5px;
+	/* display: table-cell; */
+	vertical-align: top;
+}
+
+.col-md-12, .col-sm-12 {
+	padding: 0px;
+}
+
+.contacttable {
+	width: 100%;
+}
+
+.contacttd {
+	width: 25%;
+}
+
+/* CSS Skroll */
+section {
+	min-width: 320px;
+	opacity: 1;
+}
+.loaded section,
+.no-js section {
+	opacity: 1;
+	-webkit-transition: opacity 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+}
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.hsContent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    /* color: #ebebeb; */
+    padding: 0 8%;
+    text-align: center
+}
+.hsContentWide {
+    max-width: 100%;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: top;
+    padding: 0;
+    text-align: center
+}
+.hsContentWide-top {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: top;
+    padding: 0;
+    text-align: center
+}
+.hsContent h1, h2,
+.copy h1, h2 {
+	/* color: #ffffff; 
+	font-size: 45px; */
+	line-height: 1.4;
+	margin-bottom: 12px;
+}
+.hsContent p {
+	width: 400px;
+	margin: 0 auto;
+	color: #b2b2b2;
+}
+.hsContent a {
+	color: #b2b2b2;
+	text-decoration: underline;
+}
+.bgBlack {
+	background-color: rgba(0,0,0,0.75);
+	padding: 3px 1s0px;
+}
+
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Carousel */
+.carousel, .mapimg {
+	width: 100%;
+}
+
+.carousel-control {
+	background-image: none !important;
+}
+
+/* Modal */
+.modal-dialog, .modal-lg {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+}
+
+.modal-content {
+	width: 100%;
+	height: 100%;
+	box-shadow: none;
+	border: none;
+	border-radius: 0px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #323232;
+}
+
+.modallinks {
+	text-align: left;
+	padding: 60px;
+	
+}
+
+.modallink {
+	color: rgb(180, 180, 180);
+	font-size: 25pt;
+}
+
+.modallink:hover {
+	color: rgb(240, 240, 240);
+}
+
+.modal.fade .modal-dialog 
+{
+	-webkit-transform:translate(0,90%);
+	
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+}
+
+.fade.in {
+	opacity: 1;
+}
+
+.rightarrow {
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	-ms-transform: rotate(270deg); /* IE 9 */
+	-webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+	transform: rotate(270deg);
+	cursor: pointer;
+}
+
+.leftarrow {
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	transform: rotate(90deg);
+	cursor: pointer;
+}

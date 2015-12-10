@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Amorphous</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=no">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Lato:100);
+
+      * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        overflow-x: auto; 
+        color: #ffffff;
+        font-family: 'Lato';
+        font-weight: 100;
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+      }
+
+      section {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .panels.offset section{
+        height: calc(100% - 85px);
+      }
+
+      .panels.offset header{
+        height: 85px;
+        background-color:  #1abc9c;
+      }
+
+      section.introduction {
+        text-align: center;
+        display: table;
+
+        background: #f0f0f0;
+      }
+
+      section.introduction:after {
+
+        display: block;
+        position: absolute;
+        top: -200%;
+        left: -150%;
+        height: 500%;
+        width: 200%;
+
+        content: '';
+
+        z-index: -1;
+
+        -moz-transform-origin:  100% 50%;
+        -o-transform-origin:  100% 50%;
+        -webkit-transform-origin: 100% 50%;
+        transform-origin:  100% 50%;
+
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+
+      }
+
+      .center {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      section.introduction .center p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px;
+      }
+
+      section.introduction .bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 50px;
+
+        text-align: center;
+        font-size: 60%;
+      }
+
+      section.introduction .bottom:after {
+        display: block;
+        margin: 1em auto 0;
+        height: 20px;
+        width: 20px;
+
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        content: '';
+
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      pre {
+        font-size: 65%;
+      }
+
+      .panels,
+      .log,
+      .menu,
+      pre {
+        position: absolute;
+        top: 200px;
+        bottom: 50px;
+        right: 50px;
+        left: 400px;
+        overflow: scroll;
+      }
+
+      .log,
+      .menu {
+        right: auto;
+        left: 50px;
+        width: 300px;
+      }
+
+      pre {
+        left: 50px;
+        padding: 50px;
+      }
+
+      .menu a {
+        display: block;
+        width: 100%;
+        padding: 25px;
+        background: #f1c40f;
+        margin: 0 0 25px 0;
+
+        border: none;
+      }
+
+      .menu a.active,
+      .menu a:active,
+      .menu a:hover {
+        background: #f39c12;
+      }
+    </style>
+    <link href="css/webfont/font.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet" >
+
+  </head>
+  <body>
+  
+ 	<nav class="navbar navbar-default navbar-fixed-top" id="top">
+		<div class="container-fluid">
+			
+			<div class="navbar-header">
+	        	<a href="javascript:scrollTop();"><img src="img/logo2b.svg" id="logoimg" class="imglogo"></a>
+		        <div class="navbar-right">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+				          <a href="javascript:openModal();" class="dropdown1 dropdown-toggle1" data-toggle="dropdown1" role="button" aria-expanded="false" style="padding: 0px;">
+							<img src="img/menu2.svg" class="imgmenu" id="menuimg" >
+					      </a>
+						</li>
+					</ul>
+		        </div>
+	        </div> 
+	    </div>
+	</nav> 
+
+	<section id="slide-1" class="homeSlide introduction blackpanel">
+    	<div class="center">
+            <img src="img/defaultimage.svg" class="imgnoform" id="imgnoform"></br>
+			<a href="#slide-2" class="desktop"><img src="img/downarrow3.svg" class="imgdownarrow"></a>
+      	</div>
+    </section>
+
+    <section id="slide-2" class="homeSlide whitepanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel hsContent-short">
+	          	<h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-2 h1">In 2013, global ad spending reached $500 billion.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section>
+
+	<section id="slide-3" class="homeSlide dots">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-4" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-4 h1">Each of these circles represents $500M in media.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-5" class="homeSlide imgr">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-6" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-6 h1">If you are one of the world's largest brands, you can buy one or maybe a couple of the circles.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-7" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent lines">
+		      	<img src="img/lines2.svg" class="imglines" id="imglines">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-8" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-8 h1">Even if you can afford a circle, its value is declining.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-9" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel">
+	          	<img src="img/23.svg" class="img23m" id="img23m">
+		      </div>
+	      </div>
+	    </div>
+	</section> 
+
+	<section id="slide-10" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel">
+	          	<h1>TV advertising is about 2/3 as effective as it was 10 years ago.</h1>
+		      </div>
+	      </div>
+	    </div>
+	</section> 
+
+	<section id="slide-11" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel">
+	          	<img src="img/14.svg" class="img23m" id="img14m">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-12" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel">
+	          	<h1>Digital ads are even worse, being only 1/4 as effective over the same period.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-13" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-11 h1">If you want to make something 10 percent better, you just need to be 10 percent better at what you're currently doing. Work harder, longer, faster. But if you want to make something 10 times better, you need to start over.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section id="slide-14" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+	            <img src="img/asterisk.svg" class="imgasterisk" id="imgasterisk">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-15" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-13 h1">We've built a company that is able to continuously start over by having no predetermined form.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section>
+
+	<section id="slide-16" class="homeSlide blackpanel">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent">
+	            <img src="img/model.svg" class="imgmodel" id="imgmodel">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-17" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent blackpanel hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-15 h1">Having no form allows the problem and the opportunity to define the solution, not the other way around. It encourages openness and collaboration with partners, thought leaders and customers. It creates the conditions for a rapid and iterative development process, with an emphasis on prototyping, learning, and improving.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-18" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent blackpanel hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-16 h1">The result? Ideas that outperform traditional advertising. Like this.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-19" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent greenpanel">
+	            <img src="img/nike.svg" class="imgnike">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-20" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent" id="videodiv" style="padding: 0px !important;">
+	            <video autoplay loop muted id="bgvid" poster="img/video-noplay.png">
+				  <source src="video/Nike480p.mp4" type="video/mp4">
+				  <source src="video/nike.webm" type="video/webm">
+				  <source src="video/Nike.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-21" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel hsContent-short">
+	            <h1 class="skrollable skrollable-between inline" data-center="opacity: 1" data-106-top="opacity: 0" data-bottom="opacity: 0;" data-anchor-target="#slide-19 h1">Amorphous is a new model strategic and creative collective. We help businesses invent more effective forms or marketing - from apps to content, spaces, events, games, experiences, collaborations, and more.</h1>
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-22" class="homeSlide">
+	    <div class="bcg">
+	      <div class="hsContainer blackpanel">
+	          <div class="hsContent">
+	            <img src="img/clients3.svg" class="clientimg" id="clientimg">
+		      </div>
+	      </div>
+	    </div>
+    </section> 
+
+	<section id="slide-23" class="homeSlide doublepanel">
+	    <div class="bcg desktop">
+	      <div class="hsContainer">
+	          <div class="hsContentWide-top whitepanel">
+				<div class="row contactustop" id="contacttop">
+					<div class="col-md-12 col-sm-12">
+						<img src="img/downarrow3.svg" class="rightarrow fp-prev">
+						<!--   -->
+						<div id="carousel-locations" class="carousel slide" data-ride="carousel">
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active">
+						      <img src="img/map4-a.svg" class="mapimg" alt="San Francisco">
+						    </div>
+						    <div class="item">
+						      <img src="img/map2a.svg" class="mapimg" alt="New York">
+						    </div>
+						  </div>
+						</div>
+						
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-locations" role="button" data-slide="prev">
+							<img src="img/downarrow3.svg" class="leftarrow">
+						    <span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-locations" role="button" data-slide="next">
+						    <img src="img/downarrow3.svg" class="rightarrow">
+						    <span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				<div class="row contactusbottom" id="contactbottom">
+					<div class="col-md-12 col-sm-12">
+						<table class="contacttable" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td class="contacttd" valign="top">
+				            		<h4>
+				            			Amorphous</br>
+				            			- Having no definite form: shapeless
+				            		</h4>
+								</td>
+								<td class="contacttd" valign="top">
+				            		<h4 class="locationlink" id="sfmap">
+				            			SF</br>
+				            			- 550 Montgomery St, San Francisco, CA, 94110
+				            		</h4></br>
+								</td>
+								<td class="contacttd" valign="top">
+				            		<h4>
+				            			Email</br>
+				            			- <a href="mailto:sf@amorphousinc.com">sf@amorphousinc.com</a>
+				            		</h4></br>
+								</td>
+								<td class="contacttd" valign="top">
+				            		<h4>
+				            			Phone</br>
+				            			- <a href="tel:1.415.812.9204">1.415.812.9204</a>
+				            		</h4>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td valign="top">
+				            		<h4 class="locationlink" id="nymap">
+				            			NY</br>
+				            			- 648 Broadway, New York, NY, 10012
+				            		</h4>
+								</td>
+								<td valign="top">
+				            		<h4>
+				            			Email</br>
+				            			- <a href="mailto:ny@amorphousinc.com">ny@amorphousinc.com</a>
+				            		</h4>
+								</td>
+								<td valign="top">
+				            		<h4>
+				            			Phone</br>
+				            			- <a href="tel:1.646.926.4980">1.646.926.4980</a>
+				            		</h4>
+								</td>
+							</tr>
+						</table>
+					</div>
+	            </div>
+		      </div>
+	      </div>
+	    </div>
+
+	    <div class="bcg mobile halfpanel">
+	      <div class="hsContainer">
+	          <div class="hsContentWide whitepanel">
+   
+   				<div id="carousel-mobile" class="carousel slide" data-ride="carousel">
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active sfpanel">
+				    </div>
+				    <div class="item nypanel">
+				    </div>
+				  </div>
+				</div>
+				
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-mobile" role="button" data-slide="prev">
+					<img src="img/downarrow3.svg" class="leftarrow">
+				    <span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-mobile" role="button" data-slide="next">
+				    <img src="img/downarrow3.svg" class="rightarrow">
+				    <span class="sr-only">Next</span>
+				</a>
+   
+		      </div>
+	      </div>
+	    </div>
+	    <div class="bcg mobile halfpanel">
+	      <div class="hsContainer">
+	          <div class="hsContent whitepanel" style="text-align: left; vertical-align: top; padding-top:30px;">
+  				<h2>
+  					SF<br>
+  					- 550 Montgomery St, <br>
+  					San Francisco, CA, 94110<br><br>
+  					Email<br>
+  					- <a href="mailto:sf@amorphousinc.com">sf@amorphousinc.com</a><br><br>
+  					Phone<br>
+  					- <a href="tel:+14158129204">1.415.812.9204</a><br><br><br>
+  					NY<br>
+  					- 648 Broadway, <br>
+  					New York, NY, 10012<br><br>
+  					Email<br>
+  					- <a href="mailto:ny@amorphousinc.com">ny@amorphousinc.com</a><br><br>
+  					Phone<br>
+  					- <a href="tel:+16469264980">1.646.926.4980</a><br><br>
+				</h2>
+		      </div>
+	      </div>
+	    </div>
+
+   </section> 
+   
+	<div>
+		<div class="modal fade menumodal" id="menumodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="padding-right:0px !important;">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		    	<a href="javascript:closeModal();"><img src="img/x.svg" class="imgx"></a>
+		    	<div class="modallinks">
+		            <a href="javascript:scrollToSection('slide-2');" class="modallink" id="modallink1">01<br>Background</a><br><br><br>
+		            <a href="javascript:scrollToSection('slide-16');" class="modallink" id="modallink2">02<br>Model</a><br><br><br>
+		            <a href="javascript:scrollToSection('slide-19');" class="modallink" id="modallink3">03<br>Clients</a><br><br><br>
+		            <a href="javascript:scrollToSection('slide-23');" class="modallink" id="modallink4">04<br>Contacts</a><br>
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+   </div>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.panelSnap.js"></script>
+	    
+    <script>
+	    $( document ).ready(function() {
+            if (1.5*$(window).width() > $(window).height()) {
+	    		$("#imgnoform").attr('src','img/noform-r.svg' );
+			    $("#clientimg").attr('src','img/clients3.svg' );
+            } else {
+	    		$("#imgnoform").attr('src','img/noform-m-r.svg' );
+			    $("#clientimg").attr('src','img/clients-m.svg' );
+            }
+
+            //Map Carousel
+			$('#carousel-locations, #carousel-mobile').carousel({
+				interval: false
+			})
+			$('#sfmap').click(function() {
+				$('#carousel-locations, #carousel-mobile').carousel(0);
+			});
+			$('#nymap').click(function() {
+				$('#carousel-locations, #carousel-mobile').carousel(1);
+			});
+			
+			//Add link to locations
+		    $('.slide').on('click touchstart', '.locationlink', function() {
+				if ($(this).hasClass('fp-prev')) {
+					$.fn.fullpage.moveSlideLeft();
+				} else {
+					$.fn.fullpage.moveSlideRight();
+				}
+			});
+		    $('.slide').on('click touchstart', '.rightarrow', function() {
+				if ($(this).hasClass('fp-prev')) {
+					$.fn.fullpage.moveSlideLeft();
+				} else {
+					$.fn.fullpage.moveSlideRight();
+				}
+			});
+		    $('.slide').on('click touchstart', '.leftarrow', function() {
+				if ($(this).hasClass('fp-prev')) {
+					$.fn.fullpage.moveSlideLeft();
+				} else {
+					$.fn.fullpage.moveSlideRight();
+				}
+			});
+		    
+		    //Change noform logo if mobile
+	    	if( /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent) ||
+                $(window).width() < 770) {
+	    		/* var h = Math.max(document.documentElement.clientHeight, window.screen.height, window.outerHeight, window.innerHeight || 0)
+	    		
+	    		if( !/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+	    			h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+	    		} */
+	    		
+	    		var h = $(window).height();
+	    		
+	    		if (h < 100) {
+	    			if (Math.abs(window.orientation) === 90) {
+		    			h = 768;
+	    			} else {
+		    			h = 1024;
+	    			}
+	    		}
+	    		
+	    		$('.homeSlide').css('height',h);
+	    		$('#bgvid').css('height',h);
+	    		
+			    $("#imgasterisk").attr('src','img/asterisk-m.svg' );
+			    $("#img23m").attr('src','img/23-m.svg' );
+			    $("#img14m").attr('src','img/14-m.svg' );
+	    		if ($(window).width() < 768) {
+	                $("#imglines").attr('src','img/lines-m.svg');
+	    		} else {
+	                $("#imglines").attr('src','img/lines2.svg');
+	    		}
+			    $("#imgmodel").attr('src','img/model-m.svg' );
+			    
+			    if ($(window).width() < 1024) {
+				    $(".doublepanel").css('height',2*h);
+				    $(".halfpanel").css('height','50%');
+			    }
+	    	} else {
+			    $("#imgasterisk").attr('src','img/asterisk.svg' );
+			    $("#img23m").attr('src','img/23.svg' );
+			    $("#img14m").attr('src','img/14.svg' );
+			    $("#imgmodel").attr('src','img/model.svg' );
+                $("#imglines").attr('src','img/lines2.svg');
+
+			    $(".doublepanel").css('height','');
+			    $(".halfpanel").css('height','');
+	    	}
+		    
+			//Clickable video
+			$('#videodiv').click(function() {
+				var myWin = window.open('http://www.nike.com/us/en_us/c/football/footballapp', '_blank');
+			});
+			
+		    $('#modallink1').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    $('#modallink2').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    $('#modallink3').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    $('#modallink4').click(function() {
+		    	$('#menumodal').modal('hide')
+		    });
+		    
+		    //Adjust logo and menu icons
+		    scrolledFromTop();
+		    
+	        //Responsive Adjustment
+	        adjustResponsive();
+	        
+	    });
+	    
+        jQuery(document).ready(function($) {
+
+            /* Store the window width */
+            var windowWidth = $(window).width();
+
+	        //Responsive Adjustment
+	        adjustResponsive();
+
+            /* Resize Event */
+            $(window).resize(function(){
+                // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
+                if ($(window).width() != windowWidth) {
+                	
+                    // Update the window width for next time
+                    windowWidth = $(window).width();
+
+                    if( !/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent) ) {
+                        setTimeout( function(){
+                            window.location.reload();
+                        },500); 
+                    }
+                }
+            });
+        });
+    
+	    jQuery(window).scroll(function(){
+	    	scrolledFromTop();
+	    });
+	    
+    	function scrollTop() {
+    		window.scrollTo(0,0);
+    	}
+    	function openModal() {
+    		$('#menumodal').modal('toggle')
+    	};
+    	function closeModal() {
+    		$('#menumodal').modal('hide')
+    	};
+    	
+    	function adjustResponsive() {
+    		
+	        //Responsive Adjustment
+	        if ( $(window).width() < 1024 ) {
+        		$('#imgnoform').css('width','90%');
+        		$('.dots').css('background-size','75%');
+        		$('.imgr').css('background-size','45%');
+        		$('.img23m').css('width','75%');
+        		$('.imgasterisk').css('width','45%');
+        		$('.imgnike').css('width','35%');
+        		$('.imgmodel').css('width','100%');
+        		$('.clientimg').css('width','100%');
+        		$('h1').css('font-size','150%');
+        	} else if ( $(window).width() >= 1920 ) {
+        		$('#imgnoform').css('width','70%');
+        		$('.dots').css('background-size','150%');
+        		$('.imgr').css('background-size','35%');
+        		$('.img23m').css('width','35%');
+        		$('.imgasterisk').css('width','35%');
+        		$('.imgnike').css('width','12.5%');
+        		$('.imgmodel').css('width','80%');
+        		$('.clientimg').css('width','95%');
+        		$('.imglines').css('width','100%');
+        		$('h1').css('font-size','400%');
+        	} else {
+        		var v0 = 90 - (($(window).width() - 1024) * 0.02);
+        		var v1 = 75 + (($(window).width() - 1024) * 0.08);
+        		var v2 = 45 - (($(window).width() - 1024) * 0.01);
+        		var v3 = 35 - (($(window).width() - 1024) * 0.02);
+        		var v4 = 100 - (($(window).width() - 1024) * 0.02);
+        		var v5 = 100 - (($(window).width() - 1024) * 0.005);
+        		var v6 = 200 + (($(window).width() - 1024) * 0.22);
+        		$('#imgnoform').css('width',v0 + '%');
+        		$('.dots').css('background-size', v1 + '%');
+        		$('.imgr').css('background-size', v2 + '%');
+        		$('.img23m').css('width', v2 + '%');
+        		$('.imgasterisk').css('width', v2 + '%');
+        		$('.imgnike').css('width', v3 + '%');
+        		$('.imgmodel').css('width', v4 + '%');
+        		$('.clientimg').css('width', v5 + '%');
+        		$('h1').css('font-size',v6 + '%');
+        	}
+        	if ( $(window).width() < 768 ) {
+        		$('.imglines').css('width','150%');
+        	} else if ( $(window).width() >= 1280 ) {
+        		$('.imglines').css('width','100%');
+            } else {
+        		var v7 = 150 - (($(window).width() - 768) * 0.09);
+        		$('.imglines').css('width', v7 + '%');
+            }
+    	}
+    	
+    	function scrolledFromTop() {
+	        var fromTopPx = $("#slide-1").height() + 1; // distance to trigger
+	        var scrolledFromtop = jQuery(window).scrollTop();
+	        if((scrolledFromtop >= 0 && scrolledFromtop < .99*fromTopPx) ||  //Noform
+	           (scrolledFromtop >= 1.99*fromTopPx && scrolledFromtop < 2.99*fromTopPx) ||  //Dots
+	           (scrolledFromtop >= 3.99*fromTopPx && scrolledFromtop < 4.99*fromTopPx)	|| //R Image
+	           (scrolledFromtop >= 11.98*fromTopPx && scrolledFromtop < 18.99*fromTopPx) || //Text, model, Nike
+	           (scrolledFromtop >= 20.96*fromTopPx && scrolledFromtop < 21.95*fromTopPx) ){ //Clients
+	        	$("#menuimg").attr('src','img/menu2-white.svg' );
+	        	$("#logoimg").attr('src','img/logo2b.svg' );
+	        } else {
+	        	$("#menuimg").attr('src','img/menu2.svg' );
+	        	$("#logoimg").attr('src','img/logo2a.svg' );
+	        }
+    	}
+    	
+    	function scrollToSection(section) {
+    		var s = '#' + section;
+    		window.scrollTo(0,$(s).offset().top);
+    	}
+
+        jQuery(function($) {
+    			
+    	   if( !/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent) &&
+              $(window).width() > 1025 ) {
+
+    			  // Basic demo
+    			  $('body').panelSnap();
+    			
+    			  // Menu demo
+    			  $('.menu_demo .panels').panelSnap({
+    			    $menu: $('.menu_demo .menu')
+    			  });
+    			
+    			  // Keyboard demo
+    			  $('.keyboard_demo .panels').panelSnap({
+    			    keyboardNavigation: {
+    			      enabled: true,
+    			      wrapAround: false
+    			    }
+    			  });
+    			
+    			  // Callback demo
+    			  $('.callback_demo .panels').panelSnap({
+    			    onSnapStart: function($target) {
+    			
+    			      log('callback', 'onSnapStart', $target);
+    			
+    			    },
+    			    onSnapFinish: function($target) {
+    			
+    			      log('callback', 'onSnapFinish', $target);
+    			
+    			    },
+    			    onActivate: function($target) {
+    			
+    			      log('callback', 'onActivate', $target);
+    			
+    			    }
+    			  });
+    			
+    			  // Event demo
+    			  $('.event_demo .panels').on('panelsnap:start', event_log);
+    			  $('.event_demo .panels').on('panelsnap:finish', event_log);
+    			  $('.event_demo .panels').on('panelsnap:activate', event_log);
+    			
+    			  $('.event_demo .panels').panelSnap();
+    			
+    			  function event_log(e, $target) {
+    			
+    			    log('event', e.type, $target);
+    			
+    			  }
+    			
+    			  // Offset demo
+    			  $('.offset_demo .panels').panelSnap({
+    			      offset: 85
+    			  });
+    			
+    			  // Shared log function
+    			  function log(type, action, $target) {
+    			
+    			    var text = '<p>' + action + ':<br>' + $target.find('h1').text() + '</p>';
+    			    $('.' + type + '_demo .log h2').after(text);
+    			
+    			  }
+            }
+
+        });
+
+		
+    </script>
+
+  </body>
+</html>
